@@ -13,17 +13,54 @@ var info8 = document.getElementById('info8');
 var info9 = document.getElementById('info9');
 var info10 = document.getElementById('info10');
 
+
 item1.addEventListener('click', function(){
-    info1.innerHTML = "<p>10. Power Gig: Rise of the Six String</p> <img src='http://media.ign.com/games/image/object/064/064646/Power-Gig_GAMEONLY_PS3_US_ESRB.jpg' width='400px'>"; 
-    info2.innerHTML = "<p>9. Self Defense Traning Camp</p> <img src='http://i.ytimg.com/vi/_yDdMJnTIf4/maxresdefault.jpg' width='500' title='I lost weight due to this game'>";
-    info3.innerHTML = '<p>8. Fighter Within</p> <img src="http://static2.gamespot.com/uploads/original/1197/11970954/2383019-20131118_fighterwithin_screen_j-gun+vs+matt.jpg" width="600" title="the spit physics">';
-    info4.innerHTML = '<p>7. Battlefield 4 (at launch, before it got bad)</p> <img src="http://www.actiontrip.com/images/battlefield-4-stopped-working.jpg" width="500" title="best memory">';
-    info5.innerHTML = '<p>6. Tag</p> <img src="https://wapscouncil.files.wordpress.com/2013/10/game-of-tag.jpeg" title="I love tagging children">';
-    info6.innerHTML = '<p>5. Xbox One</p> <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox-console.jpg" width="600" title="Halo 5 coming soon">';
-    info7.innerHTML = '<p>4. Rugby</p> <img src="http://www.sportsfail.com/wp-content/uploads/2014/03/hilarious-catch-fails-missed-ball-sports3.jpg" title="America FTW">';
-    info8.innerHTML = '<p>3. Star Wars Episode 1: The Phantom Menace</p> <img src="http://theartmad.com/wp-content/uploads/2015/06/Jar-Jar-Binks-3.jpg" width="500" title="I dont know. Mesa day startin pretty okee-day with a brisky morning munchy, then BOOM! Gettin very scared and grabbin that Jedi and POW! Mesa here! Mesa gettin’ very very scared!">';
-    info9.innerHTML = '<p>2. Hide and Seek</p> <img src="http://cdn77.sadanduseless.com/wp-content/uploads/2014/01/h1.jpg" title="I was that kid once">';
-    info10.innerHTML = '<p>1. Phillips CD-i</p> <img src="http://i.ytimg.com/vi/3lNo1GM_INg/hqdefault.jpg" title="Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI">';
+    info1.innerHTML = "<p>10. Power Gig: Rise of the Six String</p> <img src='http://media.ign.com/games/image/object/064/064646/Power-Gig_GAMEONLY_PS3_US_ESRB.jpg' width='400px'> <p id='moreInfo10'> </p> "; 
+    info2.innerHTML = "<p>9. Self Defense Traning Camp</p> <img src='http://i.ytimg.com/vi/_yDdMJnTIf4/maxresdefault.jpg' width='500' title='I lost weight due to this game'> <p id='moreInfo9'> </p>";
+    info3.innerHTML = '<p>8. Fighter Within</p> <img src="http://static2.gamespot.com/uploads/original/1197/11970954/2383019-20131118_fighterwithin_screen_j-gun+vs+matt.jpg" width="600" title="the spit physics"> <p id="moreInfo8"> </p>';
+    info4.innerHTML = '<p>7. Battlefield 4 (at launch, before it got bad)</p> <img src="http://www.actiontrip.com/images/battlefield-4-stopped-working.jpg" width="500" title="best memory"> <p id="moreInfo7"> </p>';
+    info5.innerHTML = '<p>6. Tag</p> <img src="https://wapscouncil.files.wordpress.com/2013/10/game-of-tag.jpeg" title="I love tagging children"> <p id="moreInfo6"></p>';
+    info6.innerHTML = '<p>5. Xbox One</p> <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Xbox-console.jpg" width="600" title="Halo 5 coming soon"> <p id="moreInfo5"></p>';
+    info7.innerHTML = '<p>4. Rugby</p> <img src="http://www.sportsfail.com/wp-content/uploads/2014/03/hilarious-catch-fails-missed-ball-sports3.jpg" title="America FTW"> <p id="moreInfo4"></p>';
+    info8.innerHTML = '<p>3. Star Wars Episode 1: The Phantom Menace</p> <img src="http://theartmad.com/wp-content/uploads/2015/06/Jar-Jar-Binks-3.jpg" width="500" title="I dont know. Mesa day startin pretty okee-day with a brisky morning munchy, then BOOM! Gettin very scared and grabbin that Jedi and POW! Mesa here! Mesa gettin’ very very scared!"><p id="moreInfo3"></p>';
+    info9.innerHTML = '<p>2. Hide and Seek</p> <img src="http://cdn77.sadanduseless.com/wp-content/uploads/2014/01/h1.jpg" title="I was that kid once"><p id="moreInfo2"></p>';
+    info10.innerHTML = '<p>1. Phillips CD-i</p> <img src="http://i.ytimg.com/vi/3lNo1GM_INg/hqdefault.jpg" title="Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI Lots of SPAGHETTI"><p id="moreInfo1"></p>';
+
+    info1.addEventListener("click", function(){
+        document.getElementById('moreInfo10').innerHTML = "Power Gig is probably the absolute best music game out there. With such classics as Rock and Roll Jesus from Kid Rock and Camera Shy from School Boy Humour, this is truly a game to check out.";
+    } )
+    info2.addEventListener("click", function(){
+        document.getElementById('moreInfo9').innerHTML = "Self Defense Training Camp is a good time for all, just look at the people in the bottom right, they sure look like they're having fun."
+    } )
+    info3.addEventListener("click", function(){
+        document.getElementById('moreInfo8').innerHTML = "Fighter Within is one of the best fighting games, by far better than street fighter and so.. so much better than mortal kombat (stay away from that game)."
+    } )
+    info4.addEventListener("click", function(){
+        document.getElementById('moreInfo7').innerHTML = "Battlefield 4 was truly something to admire when it was first released. With the smooth performance and great graphics at launch, it's a shame the developers threw all that out the window with the constant patches, ruining the game for good."
+    } )
+    info5.addEventListener("click", function(){
+        document.getElementById('moreInfo6').innerHTML = "Tag is a game anyone can play, whether at work, at home, at school, or in a bedroom"
+    } )
+    info6.addEventListener("click", function(){
+        document.getElementById('moreInfo5').innerHTML = "The games on this console are so good, I just put the entire console on the list."
+    } )
+    info7.addEventListener("click", function(){
+        document.getElementById('moreInfo4').innerHTML = "lol just kidding"
+    } )
+    info8.addEventListener("click", function(){
+        document.getElementById('moreInfo3').innerHTML = "I love the direction George Lucas took with this game."
+    } )
+    info9.addEventListener("click", function(){
+        document.getElementById('moreInfo2').innerHTML = "Hide and seek is just like tag, anyone can play it at any time."
+    } )
+    info10.addEventListener("click", function(){
+        document.getElementById('moreInfo1').innerHTML = "luweegee"
+    } ) 
+
+
+
+
+
 });
                        
 item2.addEventListener('click', function(){
@@ -37,6 +74,37 @@ item2.addEventListener('click', function(){
     info8.innerHTML = '<p>3. Freeze Tag</p> <img src="http://vignette4.wikia.nocookie.net/batman/images/7/7c/Mr-freeze-evil-plan.jpg/revision/latest?cb=20120430121640" title="Couldnt find any pictures of Freeze Tag so I guess Ill have to use this picture for now.">';
     info9.innerHTML = '<p>2. Battlefield 3</p> <img src="http://bf4central.com/wp-content/uploads/2013/10/bf3-neck-640x360.jpg" title="Those glitches though">';
     info10.innerHTML = '<p>1. Youtube Comment Section</p> <img src="https://uproxx.files.wordpress.com/2013/09/youtube.jpg?w=650" title="TrollTube">';
+    
+    info1.addEventListener("click", function(){
+        document.getElementById('moreInfo10').innerHTML = "Half life 3 is so bad, valve hasn't even released it yet.";
+    } );
+    info2.addEventListener("click", function(){
+        document.getElementById('moreInfo9').innerHTML = "All nintendo games I have played have been complete garbage."
+    } );
+    info3.addEventListener("click", function(){
+        document.getElementById('moreInfo8').innerHTML = "It's a stupid fallout clone with none of the charm or barren wasteland of it."
+    } );
+    info4.addEventListener("click", function(){
+        document.getElementById('moreInfo7').innerHTML = "Left 4 dead is complete trash, just buy resident evil 6, it's way better."
+    } );
+    info5.addEventListener("click", function(){
+        document.getElementById('moreInfo6').innerHTML = "Stupid street fighter clone."
+    } );
+    info6.addEventListener("click", function(){
+        document.getElementById('moreInfo5').innerHTML = "Soccer is such a bad game."
+    } );
+    info7.addEventListener("click", function(){
+        document.getElementById('moreInfo4').innerHTML = "Tetris is too overcomplicated, I can't believe they couldn't make this simple."
+    } );
+    info8.addEventListener("click", function(){
+        document.getElementById('moreInfo3').innerHTML = "Tag clone, all i have to say."
+    } );
+    info9.addEventListener("click", function(){
+        document.getElementById('moreInfo2').innerHTML = "Battlefield 3 really sucks, at least with Battlefield 4, it was really good at launch, 3 was never good."
+    } );
+    info10.addEventListener("click", function(){
+        document.getElementById('moreInfo1').innerHTML = "Just kidding."
+    } )
 });
 item3.addEventListener('click', function(){
     info1.innerHTML = '<p>10. Water World</p> <img src="http://img.gamefaqs.net/screens/8/f/8/gfs_29141_2_2.jpg" title="Too red for my taste">';
@@ -49,6 +117,37 @@ item3.addEventListener('click', function(){
     info8.innerHTML = '<p>3. Grand Theft Auto</p> <img src="https://i.ytimg.com/vi/v5qbOTT7JvY/maxresdefault.jpg" width="500" title="Too wacky and over the top, I cant believe they put super powers in the 4th grand theft auto game. Saints Row on the other hand, incredibly realistic.">';
     info9.innerHTML = '<p>2. Call of Duty</p> <img src="http://assets.vg247.com/current//2014/09/halo_the_master_chief_collection_3.jpg" width="500" title="Science Fiction is for nerds and sucks, but call of duty is just average.">';
     info10.innerHTML = '<p>1. American Football</p> <img src="http://www.fondos7.net/wallpaper-original/wallpapers/pelota-de-futbol-9716.jpg" width="500" title="more of a sport than soccer.">';
+    
+    info1.addEventListener("click", function(){
+        document.getElementById('moreInfo10').innerHTML = "";
+    } )
+    info2.addEventListener("click", function(){
+        document.getElementById('moreInfo9').innerHTML = ""
+    } )
+    info3.addEventListener("click", function(){
+        document.getElementById('moreInfo8').innerHTML = ""
+    } )
+    info4.addEventListener("click", function(){
+        document.getElementById('moreInfo7').innerHTML = ""
+    } )
+    info5.addEventListener("click", function(){
+        document.getElementById('moreInfo6').innerHTML = ""
+    } )
+    info6.addEventListener("click", function(){
+        document.getElementById('moreInfo5').innerHTML = ""
+    } )
+    info7.addEventListener("click", function(){
+        document.getElementById('moreInfo4').innerHTML = ""
+    } )
+    info8.addEventListener("click", function(){
+        document.getElementById('moreInfo3').innerHTML = ""
+    } )
+    info9.addEventListener("click", function(){
+        document.getElementById('moreInfo2').innerHTML = ""
+    } )
+    info10.addEventListener("click", function(){
+        document.getElementById('moreInfo1').innerHTML = ""
+    } )
 });
 item4.addEventListener('click', function(){
     info1.innerHTML = '<p>10. AWP Asiimov</p> <img src="http://csgostash.com/img/skins/s274.png">'
@@ -61,4 +160,35 @@ item4.addEventListener('click', function(){
     info8.innerHTML = '<p>3. This thing</p> <img src="http://cdn.gamerant.com/wp-content/uploads/Ghost-Recon-Future-Soldier-Gunsmith-components-570x382.jpg" width="400">'
     info9.innerHTML = '<p>2. Sword</p> <img src="http://pngimg.com/upload/sword_PNG5521.png" width="400">'
     info10.innerHTML = '<p>1. Beats by Dre</p> <img src="http://mydjblog.com/wp-content/uploads/Beats-by-Dr-Dre.jpg" width="400">'
+    
+    info1.addEventListener("click", function(){
+        document.getElementById('moreInfo10').innerHTML = "";
+    } )
+    info2.addEventListener("click", function(){
+        document.getElementById('moreInfo9').innerHTML = ""
+    } )
+    info3.addEventListener("click", function(){
+        document.getElementById('moreInfo8').innerHTML = ""
+    } )
+    info4.addEventListener("click", function(){
+        document.getElementById('moreInfo7').innerHTML = ""
+    } )
+    info5.addEventListener("click", function(){
+        document.getElementById('moreInfo6').innerHTML = ""
+    } )
+    info6.addEventListener("click", function(){
+        document.getElementById('moreInfo5').innerHTML = ""
+    } )
+    info7.addEventListener("click", function(){
+        document.getElementById('moreInfo4').innerHTML = ""
+    } )
+    info8.addEventListener("click", function(){
+        document.getElementById('moreInfo3').innerHTML = ""
+    } )
+    info9.addEventListener("click", function(){
+        document.getElementById('moreInfo2').innerHTML = ""
+    } )
+    info10.addEventListener("click", function(){
+        document.getElementById('moreInfo1').innerHTML = ""
+    } )
 });

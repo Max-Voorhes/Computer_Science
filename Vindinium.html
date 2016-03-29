@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title> Maxwell Voorhes</title>
+    </head>
+    <style type="text/css">
+        body {
+            background-color:yellow;
+            font-family:monospace;
+        }
+        img {
+            float:left;
+            margin-right:15px;
+        }
+        h1 {
+            font-size:50px;
+            text-decoration:underline;
+        }
+        h2 {
+            font-size:25px;
+        }
+        p {
+            font-size:15px;
+        }
+    </style>
+    <body>
+        <center><h1>Vindinium</h1></center>
+        <img src="http://stratosprovatopoulos.com/wp-content/uploads/2014/02/Vindinium.jpg" width="400">
+        <h2>What is Vindinium?</h2>
+        <p>Vindinium is a turn based strategy game where you have to collect the most gold 
+        in order to win. The difference between this game and other games is that you have 
+        to program artificial intelligence in order to win. </p>
+        <h2>Code behind Vindinium</h2>
+        <p>There were many parts to my code to get the Vindinium bot to function properly. 
+        Here is some of the code showing what my bot does when it is at low health .</p>
+        <pre><code>
+        if(bot.yourBot.life < 50){
+            task = "tavern";
+        } else {
+            task = "freemines";    
+        }
+        
+            </pre></code>
+        <p>What this code is suppose to do is to tell the bot what to do when they are at 
+        low health which is to go to a Tavern. The Taverns in Vindinium is suppose to heal 
+        your bot which is why I set the bot to where when you have below 50 health, you 
+        instantly go to a tavern. There is another part of this code which is the else function.
+        The else function allows bots if they don't do the "if" function to do the task "freemines" 
+        which allows the bot to takeover mines that enemy bots have not taken yet. This is part of 
+        code that tells the bot what to do. Here is another piece of code telling the bot where to go
+        when the bot is assigned a task.</p>
+        <pre><code>
+        if(task === "tavern"){
+            var closestTavern = bot.taverns[0];
+            for(i = 0; i < bot.taverns.length; i++) {
+                if(bot.findDistance(myPos, closestTavern) > bot.findDistance(myPos, bot.taverns[i])) {
+                    closestTavern = bot.taverns[i];
+                }
+            }
+            console.log("Something about a Tavern.");
+            myDir = bot.findPath(myPos, closestTavern);
+        }</pre></code>
+        <p>This piece of code is suppose to tell the bot what to do when the task is "tavern." 
+        As you can see, there are two "if" functions. The first one is just suppose to tell the 
+        bot what to do when the task is "tavern." The second one is suppose to tell the bot which 
+        tavern to go to which in this case is the "closestTavern" which is the tavern closest to 
+        your bot.</p>
+        <h2>What did I learn?</h2>
+        <p>I learned how to code AI for specifically Vindinium because I don't know if 
+        this type of code will apply to other games other than vindinium.</p>
+        <ul id="navbar">
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="hardware.html">Hardware</a></li>
+            <li><a href="calc.html">Calculator</a></li>
+            <li><a href="boxgame.html">Box Game (in development stages)</a></li>
+            <li><a href="information.html">Top 10 Lists</a></li>
+            <li><a href="Modeling.html">Game Controller</a></li>
+            <li><a href="index.html">Index</a></li>
+        </ul>
+    </body>
+</html>

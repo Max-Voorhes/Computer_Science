@@ -1,55 +1,109 @@
-var gamecontroller = document.getElementById('gamecontroller');
-var analogstick = document.getElementById('analogstick');
-var fourfacebuttons = document.getElementById('fourfacebuttons');
-var dpad = document.getElementById('dpad');
-var start = document.getElementById('start');
-var home = document.getElementById('home');
-var bumpers = document.getElementById('bumpers');
-var triggers = document.getElementById('triggers');
-var analogStickHoverable = document.getElementById('analogStickHoverable');
+var leftanalogStickHoverable = document.getElementById('leftanalogStickHoverable');
+var rightanalogStickHoverable = document.getElementById('rightanalogStickHoverable');
+var fourfacebuttonshoverable = document.getElementById('fourfacebuttonshoverable');
+var dpadhoverable = document.getElementById('dpadhoverable');
+var starthoverable = document.getElementById('starthoverable');
+var homehoverable = document.getElementById('homehoverable');
+var leftbumperhoverable = document.getElementById('leftbumperhoverable');
+var rightbumperhoverable = document.getElementById('rightbumperhoverable');
+var lefttriggerhoverable = document.getElementById('lefttriggerhoverable');
+var righttriggerhoverable = document.getElementById('righttriggerhoverable');
+var connecthoverable = document.getElementById('connecthoverable');
+var backhoverable = document.getElementById('backhoverable');
+var hovertext = document.getElementById('hovertext');
 
 
+leftanalogStickHoverable.addEventListener("mouseenter", function(){
+   hovertext.innerHTML="<p>The left is mostly used for movement in games and to navigate through menu screens in games or home menus on your console of choice.</p>";
+});
 
-gamecontroller.addEventListener("click", function(){
-    analogstick.innerHTML = "<h2>Analog stick</h2> <img src='http://g02.a.alicdn.com/kf/HTB18nsiJpXXXXbnXVXXq6xXFXXXo/1-Pair-X360ace-Gamepad-Hat-Analog-Joystick-Rubber-Cap-for-Xbox-360-Cover-Gaming-Other-Accessories.jpg' width='200'>";
-    fourfacebuttons.innerHTML = "<h2>A, B, X, Y</h2> <img src='http://www.marauderzstuff.com/content/binary/Windows-Live-Writer/The-Xbox-360-Transforming-Controller_D/DSC00464.jpg' width='300'>";
-    dpad.innerHTML = "<h2>Directional Pad</h2> <img src='http://www.thatvideogameblog.com/wp-content/uploads/2008/03/360dpad-mar20.jpg' width='375'>";
-    start.innerHTML = "<h2>Start and Select Button</h2> <img src='http://vignette3.wikia.nocookie.net/castlecrashers/images/b/ba/Xbox360_Button_Start.png/revision/latest?cb=20081102233126' width='200'>";
-    home.innerHTML = "<h2>Home Button</h2> <img src='http://nxeassets.xbox.com/shaxam/0201/40/df/40dfb105-39e6-4f20-bfd4-c304570e2a43.PNG?v=1' width='300'>";
-    bumpers.innerHTML = "<h2>Bumpers</h2><img src='https://wiki.teamfortress.com/w/images/a/ae/Xbox_Button_Bumper_Right.png?t=20111217064810' width='330'>";
-    triggers.innerHTML = "<h2>Triggers</h2><img src='http://www.modjunkiez.com/assets/images/blacktriggers1.jpg' width='190'>";
-    
-    analogstick.addEventListener("click", function(){
-        document.getElementById('analogstickinfo').innerHTML = "There are two analog sticks on a controller, one on the top left and the bottom right. The one on the top left is mostly used for movement in games and the one on the bottom right is either used for looking around in first or third person games or just never used at all.";
-    }
-    );
-    fourfacebuttons.addEventListener("click", function(){
-        document.getElementById('fourfacebuttonsinfo').innerHTML = "";
-    }
-    );
-    dpad.addEventListener("click", function(){
-        document.getElementById('dpadinfo').innerHTML = "";
-    }
-    );
-    start.addEventListener("click", function(){
-        document.getElementById('startinfo').innerHTML = "";
-    }
-    );
-    home.addEventListener("click", function(){
-        document.getElementById('homeinfo').innerHTML = "";
-    }
-    );
-    bumpers.addEventListener("click", function(){
-        document.getElementById('bumpersinfo').innerHTML = "";
-    }
-    );
-    triggers.addEventListener("click", function(){
-        document.getElementById('triggersinfo').innerHTML = "";
-    }
-    );
-    analogStickHoverable.addEventListener("mouseenter", function(){
-        
-    }
-    );
-}
-);
+leftanalogStickHoverable.addEventListener("mouseleave", function(){
+   hovertext.innerHTML="";
+});
+rightanalogStickHoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The right analog stick is often used to look around in first or third person shooters or isn't used at all.</p>";
+});
+
+rightanalogStickHoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+fourfacebuttonshoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The ABXY buttons are usually called the face buttons on a controller since they are the only buttons that really stick out. The A button is often used to accept commands you give to the game, the B button is often used to go back, and the X and Y buttons are used to perform specific actions in what ever game you are playing along with the A and B buttons.</p>";
+});
+
+fourfacebuttonshoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+dpadhoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The directional pad also known as the dpad is the equivalent to arrow keys on a keyboard. The dpad is like the left analog stick in that it is most often used for movement in video games except with a dpad, it's much harder to move since you don't have full 360 degree control like you do with an analog stick.</p>";
+});
+
+dpadhoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+starthoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The start button is often used to bring up menus in video games.</p>";
+});
+
+starthoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+homehoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The home or guide button is the button that brings up the home menu while you are playing a game.</p>";
+});
+
+homehoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+leftbumperhoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The left bumper has many uses in games, but on the home menu, it is most often to scroll to the page to the left of the one you are currently on when using a game console.</p>";
+});
+
+leftbumperhoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+rightbumperhoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The right bumper also has many uses in games, but on the home menu, it is most often to scroll to the page to the right of the one you are currently on when using a game console.</p>";
+});
+
+rightbumperhoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+lefttriggerhoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The left trigger also has many uses in games and that is about it for the left trigger.</p>";
+});
+
+lefttriggerhoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+righttriggerhoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The right trigger also has many uses in other games but it's most significant use is in shooter games where you fire the weapon the player is using with the right trigger.</p>";
+});
+
+righttriggerhoverable.addEventListener("mouseleave", function(){
+    hovertext.innerHTML="";
+});
+
+connecthoverable.addEventListener("mouseenter", function(){
+    hovertext.innerHTML="<p>The connect button is used to sync up your controller with your console of choice. For example, this controller would sync up to an xbox 360 since it's an xbox 360 controller.</p>";
+});
+
+connecthoverable.addEventListener("mouseleave", function() {
+   hovertext.innerHTML=""; 
+});
+
+backhoverable.addEventListener("mouseenter", function() {
+   hovertext.innerHTML="<p>To be completely honest, I don't know why this button is here.</p>"; 
+});
+
+backhoverable.addEventListener("mouseleave", function() {
+    hovertext.innerHTML="";
+});

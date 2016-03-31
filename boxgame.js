@@ -6,7 +6,18 @@ var hardenemies = [];
 var superhardenemies = [];
 // var gameover = [];
 var die = [];
-// var line = [];
+
+// var line = {
+//     xPos: 0,
+//     yPos: 400,
+//     height: 50,
+//     width: 400,
+    
+//     draw: function() {
+//         ctx.rect(line.xPos, line.yPos, this.width, this.height);
+//         ctx.stroke();
+//     }
+// };
 
 
 var box = {
@@ -74,6 +85,7 @@ function Bullet(xPos, yPos ) {
         return true;
         }
     };
+    this.toremove=false;
 }
 
 function Enemy(xPos, yPos) {
@@ -122,16 +134,7 @@ function Superhardenemy(xPos, yPos) {
         this.yPos -= -100;
     };
 }
-// function Line(xPos, yPos){
-//     this.xPos = xPos;
-//     this.yPos = yPos;
-//     this.height = 10;
-//     this.width = 400;
-//     this.draw = function() {
-//         ctx.rect(this.xPos, this.yPos, this.width, this.height);
-//         ctx.stroke();
-//     };
-// }
+
     
     
     
@@ -172,8 +175,7 @@ document.addEventListener("keyup", function(evt) {
         box.shooting = false;
     }
     
-    }
-);
+    });
 
 function gameLoop() {
     ctx.beginPath();
@@ -188,7 +190,7 @@ function gameLoop() {
         for(var k = 0; k < enemies.length; k++){
             if(isColliding(bullets[j], enemies[k])){
                 enemies.splice(k, 1);
-                bullets.splice(j, 1);
+                bullets[j].toremove=true;
             } 
         }
         
@@ -213,15 +215,27 @@ function gameLoop() {
         
     }
     
+    garbagecollector();
     window.requestAnimationFrame(gameLoop);
 }
 
+
+function garbagecollector(){
+    for (var j = 0; j < bullets.length; j++) {
+            if(bullets[j].toremove === true){
+                bullets.splice(j, 1)
+            }
+    }
+}
+
+
 var wave1 = setInterval(function(){
     var tempRand = Math.random() * mycanvas.width;
-    enemies.push(new Enemy(tempRand, 0));
+    enemies.push(new Enemy(tempRand - 2, 0));
     hardenemies.push(new Hardenemy(tempRand, 0));
     superhardenemies.push(new Superhardenemy(tempRand, 0));
-}, 1000);
+}, 
+1000);
 
 
 function isColliding(thing1, thing2){

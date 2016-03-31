@@ -63,7 +63,124 @@
         As you can see, there are two "if" functions. The first one is just suppose to tell the 
         bot what to do when the task is "tavern." The second one is suppose to tell the bot which 
         tavern to go to which in this case is the "closestTavern" which is the tavern closest to 
-        your bot.</p>
+        your bot. Here is all of the code if you want to decifer what each part of the code means.</p>
+        <pre><code>
+        var Bot = require('bot');
+        var PF = require('pathfinding');
+        // var bot = new Bot('xhifkicg', 'training', 'http://vindinium.org'); //Put your bot's code here and change training to Arena when you want to fight others.
+        var bot = new Bot('wnq1bg2j', 'arena', 'http://52.53.211.7:9000'); //Put your bot's code here and change training to Arena when you want to fight others.
+        var goDir;
+        var Promise = require('bluebird');
+        Bot.prototype.botBrain = function() {
+            return new Promise(function(resolve, reject) {
+                _this = bot;
+                //////* Write your bot below Here *//////
+                //////* Set `myDir` in the direction you want to go and then bot.goDir is set to myDir at the bottom *////////
+        
+                /*                                      *
+                 * This Code is global data!            *
+                 *                                      */
+                
+                // Set myDir to what you want and it will set bot.goDir to that direction at the end.  Unless it is "none"
+                var myDir;
+                var myPos = [bot.yourBot.pos.x, bot.yourBot.pos.y];
+        
+                var enemyBots = [];
+                if(bot.yourBot.id != 1) enemyBots.push(bot.bot1);
+                if(bot.yourBot.id != 2) enemyBots.push(bot.bot2);
+                if(bot.yourBot.id != 3) enemyBots.push(bot.bot3);
+                if(bot.yourBot.id != 4) enemyBots.push(bot.bot4);
+        
+                // finds the closest enemy bot //
+                    var closestBot = enemyBots[0];
+                    for(i = 0; i < bot.enemyBots.length; i++) {
+                        if(bot.findDistance(myPos, [closestBot.pos.x, closestBot.pos.y]) > bot.findDistance(myPos, [enemyBots[i].pos.x, enemyBots[i].pos.y])) {
+                            closestBot = enemyBots[i];
+                        }
+                    }
+                    var enemyMines;
+                    for(i = 0; i < bot.enemyMines.length; i++){
+                        
+                    }
+                
+                /*                                      *
+                 * This Code Decides WHAT to do         *
+                 *                                      */
+                var task;
+                
+                if(bot.yourBot.life < 50){
+                    task = "tavern";
+                } else {
+                    task = "freemines";    
+                }
+                
+                if(bot.yourBot.life > 60){
+                    task = "attack";
+                } else {
+                    task = "freemines";
+                }
+                
+                if(bot.bot1.minecount > 5)
+                    task = "enemymines";
+                
+                /*                                      *
+                 * This Code Determines HOW to do it    *
+                 *                                      */
+                if(task === "tavern"){
+                    var closestTavern = bot.taverns[0];
+                    for(i = 0; i < bot.taverns.length; i++) {
+                        if(bot.findDistance(myPos, closestTavern) > bot.findDistance(myPos, bot.taverns[i])) {
+                            closestTavern = bot.taverns[i];
+                        }
+                    }
+                    console.log("Something about a Tavern.");
+                    myDir = bot.findPath(myPos, closestTavern);
+                }
+        
+        
+                // This Code find the nearest freemine and sets myDir toward that direction //
+                if(task === "freemines") {
+                    var closestMine = bot.freeMines[0];
+                    for(i = 0; i < bot.freeMines.length; i++) {
+                        if(bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, bot.freeMines[i])) {
+                            closestMine = bot.freeMines[i];
+                        }
+                    }
+                    console.log("Claiming a Free Mine!");
+                    myDir = bot.findPath(myPos, closestMine);
+                }
+                if(task === "attack") {
+                    console.log("Attacking Nearest Bot!");
+                    myDir = bot.findPath(myPos, [closestBot.pos.x, closestBot.pos.y]);
+                }
+                if(task === "enemymines")
+                    var closestTakenmine = bot.enemyMines[0];
+                    for(i = 0; i < bot.enemyMines.length; i++) {
+                        if(bot.findDistance(myPos, closestTakenmine) > bot.findDistance(myPos, bot.enemyMines[i])) {
+                            closestTakenmine = bot.enemyMines[i];
+                        }
+                    }
+        
+                /*                                                                                                                              *
+                 * This Code Sets your direction based on myDir.  If you are trying to go to a place that you can't reach, you move randomly.   *
+                 * Otherwise you move in the direction set by your code.  Feel free to change this code if you want.                            */
+                if(myDir === "none") {
+                    console.log("Going Random!");
+                    var rand = Math.floor(Math.random() * 4);
+                    var dirs = ["north", "south", "east", "west"];
+                    bot.goDir = dirs[rand];
+                } else {
+                    bot.goDir = myDir;
+                }
+        
+        
+        
+                ///////////* DON'T REMOVE ANTYTHING BELOW THIS LINE *//////////////
+                resolve();
+            });
+        };
+        bot.runGame();
+        </pre></code>
         <h2>What did I learn?</h2>
         <p>I learned how to code AI for specifically Vindinium because I don't know if 
         this type of code will apply to other games other than vindinium.</p>

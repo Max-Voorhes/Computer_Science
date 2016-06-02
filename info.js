@@ -97,7 +97,7 @@ item2.addEventListener('click', function(){
         document.getElementById('moreInfo4').innerHTML = "Tetris is too overcomplicated, I can't believe they couldn't make this simple.";
     } );
     info8.addEventListener("click", function(){
-        document.getElementById('moreInfo3').innerHTML = "Tag clone, all i have to say.";
+        document.getElementById('moreInfo3').innerHTML = "All i have to say is that this is a ag clone.";
     } );
     info9.addEventListener("click", function(){
         document.getElementById('moreInfo2').innerHTML = "Battlefield 3 really sucks, at least with Battlefield 4, it was really good at launch, 3 was never good.";

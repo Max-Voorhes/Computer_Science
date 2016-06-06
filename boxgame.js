@@ -6,6 +6,8 @@ var hardenemies = [];
 var superhardenemies = [];
 // var gameover = [];
 var die = [];
+var score = 0;
+var scoredisplay = document.getElementById("scoredisplay")
 
 // var line = {
 //     xPos: 0,
@@ -96,7 +98,7 @@ function Enemy(xPos, yPos) {
     this.draw = function() {
         ctx.rect(this.xPos, this.yPos, this.width, this.height);
         ctx.stroke();
-    };
+    }
     this.move = function() {
         this.xPos -= 0;
         this.yPos -= -1;
@@ -191,6 +193,7 @@ function gameLoop() {
             if(isColliding(bullets[j], enemies[k])){
                 enemies.splice(k, 1);
                 bullets[j].toremove=true;
+                score = score + 100;
             } 
         }
         
@@ -216,6 +219,7 @@ function gameLoop() {
     }
     
     garbagecollector();
+    scoredisplay.innerHTML = "score: " + score
     window.requestAnimationFrame(gameLoop);
 }
 
@@ -231,7 +235,7 @@ function garbagecollector(){
 
 var wave1 = setInterval(function(){
     var tempRand = Math.random() * mycanvas.width;
-    enemies.push(new Enemy(tempRand - 2, 0));
+    enemies.push(new Enemy(tempRand - 5, 0));
     hardenemies.push(new Hardenemy(tempRand, 0));
     superhardenemies.push(new Superhardenemy(tempRand, 0));
 }, 

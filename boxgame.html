@@ -8,18 +8,43 @@
             background-color:yellow;
             font-family:monospace;
         }
+    /*p {*/
+    /*    position:absolute;*/
+    /*    left:75%;*/
+    /*    top:10%;*/
+    /*}*/
+    /*#scoredisplay {*/
+    /*    position:absolute;*/
+    /*    left:75%;*/
+    /*    top:10%;*/
+    /*}*/
+    #container {
+        vertical-align:top;
+        width:45%;
+        display:inline-block;
+    }
+    l {
+        vertical-align:top;
+        text-align:right;
+        width:45%;
+        display:inline-block;
+    }
 </style>
 <body>
     <center>
         <h1>Box Game (in development stages)</h1>
     <canvas id="mycanvas" width="400px" height="500px" style="border: 2px solid black"></canvas>
+    <div id="container">
     <p>Press refresh on your browser to start over.</p>
     <p>Left and right arrow keys: Moves left and right.</p>
     <p>Spacebar: Shoot</p>
     <p></p>
+    <div id="scoredisplay">
+        
+    </div>
+    </div>
     </center>
     <script src="boxgame.js"></script>
-    
          <ul id="navbar">
             <li><a href="aboutme.html">About Me</a></li>
             <li><a href="hardware.html">Hardware</a></li>

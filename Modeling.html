@@ -1,209 +1,237 @@
 <html>
-    <head>
-        <title>Controller</title>
-    </head>
-    <style type="text/css">
-        body {
-            background-color:yellow;
-            font-family:monospace;
-        }
-        .Parts {
-            font-size:20px;
-        }
-        p {
-            font-size:15px;
-        }
-        
-        #leftanalogStickHoverable{
-            width: 40px;
-            height: 40px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-204px;
-            left:-87px;
-        }
-        #rightanalogStickHoverable{
-            width: 40px;
-            height: 40px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-210px;
-            left:40px;
-        }
-        #fourfacebuttonsHoverable{
-            width: 65px;
-            height: 60px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-310px;
-            left:90px;
-        }
-        #dpadHoverable{
-            width: 40px;
-            height: 40px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-320px;
-            left:-45px;
-        }
-        #startHoverable{
-            width: 14px;
-            height: 10px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-395px;
-            left:32px;
-        }
-        #homeHoverable{
-            width: 23px;
-            height: 22px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-415px;
-            left:0;
-        }
-        #leftbumperHoverable{
-            width: 50px;
-            height: 20px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-490px;
-            left:-85px;
-        }
-        #rightbumperHoverable{
-            width: 50px;
-            height: 20px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-515px;
-            left:87px;
-        }
-        #lefttriggerHoverable{
-            width: 20px;
-            height: 30px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-570px;
-            left:-80px;
-        }
-        #righttriggerHoverable{
-            width: 20px;
-            height: 30px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-605px;
-            left:80px;
-        }
-        #connecthoverable{
-            width: 5px;
-            height: 5px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-600px;
-            left:-30px;
-        }
-        #backhoverable{
-            width: 12px;
-            height: 10px;
-            border-radius:50px;
-            border: 2px solid black;
-            position: relative;
-            top:-560px;
-            left:-30px;
-        }
-        img {
-            position:relative;
-        }
-        /*#hoverable {*/
-        /*    position:relative;*/
-        /*    top:30%;*/
-        /*}*/
-        /*#navbar {*/
-        /*    position:absolute;*/
-        /*    top:50%;*/
-        /*}*/
-        /*#hovertext {*/
-            /*position:absolute;*/
-            /*top:45%;*/
-        /*}*/
-        /*p {*/
-        /*    position:absolute;*/
-        /*    top:40%;*/
-        /*    left:33.5%;*/
-        /*}*/
-    </style>
-    <body>
-        <center>
+
+<head>
+    <title>Controller</title>
+</head>
+<style type="text/css">
+    * {
+        /*border: 2px solid black;*/
+    }
+    
+    body {
+        background-color: yellow;
+        font-family: monospace;
+    }
+    
+    .Parts {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 15px;
+    }
+    
+    #leftanalogStickHoverable {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -204px;
+        left: -87px;
+    }
+    
+    #rightanalogStickHoverable {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -210px;
+        left: 40px;
+    }
+    
+    #fourfacebuttonsHoverable {
+        width: 65px;
+        height: 60px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -310px;
+        left: 90px;
+    }
+    
+    #dpadHoverable {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -320px;
+        left: -45px;
+    }
+    
+    #startHoverable {
+        width: 14px;
+        height: 10px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -395px;
+        left: 32px;
+    }
+    
+    #homeHoverable {
+        width: 23px;
+        height: 22px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -415px;
+        left: 0;
+    }
+    
+    #leftbumperHoverable {
+        width: 50px;
+        height: 20px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -490px;
+        left: -85px;
+    }
+    
+    #rightbumperHoverable {
+        width: 50px;
+        height: 20px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -515px;
+        left: 87px;
+    }
+    
+    #lefttriggerHoverable {
+        width: 20px;
+        height: 30px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -570px;
+        left: -80px;
+    }
+    
+    #righttriggerHoverable {
+        width: 20px;
+        height: 30px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -605px;
+        left: 80px;
+    }
+    
+    #connecthoverable {
+        width: 5px;
+        height: 5px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -600px;
+        left: -30px;
+    }
+    
+    #backhoverable {
+        width: 12px;
+        height: 10px;
+        border-radius: 50px;
+        border: 2px solid black;
+        position: relative;
+        top: -560px;
+        left: -30px;
+    }
+    
+    img {
+        position: relative;
+    }
+    /*#hoverable {*/
+    /*    position:relative;*/
+    /*    top:30%;*/
+    /*}*/
+    /*#navbar {*/
+    /*    position:absolute;*/
+    /*    top:50%;*/
+    /*}*/
+    #hovertext {
+        height: 300px;
+        vertical-align:top;
+    position:absolute;
+    top:400px;
+    text-align:center;
+    width:60%;
+    left: 20%;
+    }
+    /*p {*/
+    /*    position:absolute;*/
+    /*    top:40%;*/
+    /*    left:33.5%;*/
+    /*}*/
+</style>
+
+<body>
+    <center style="margin-bottom:-250px">
         <div id="gamecontroller">
             <h1>Parts of a Game Controller (under development)</h1>
-            <img src= "https://upload.wikimedia.org/wikipedia/commons/2/2c/360_controller.svg" width="500">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/360_controller.svg" width="500">
             <p>Hover over the button you want to learn more about.</p>
             <p>This section of the website is still under development so it isn't perfect whatsoever.</p>
         </div>
-        <div id="hoverable">
-        <div id="leftanalogStickHoverable">
-            
-        </div>
-        <div id="rightanalogStickHoverable">
-            
-        </div>
-        <div id="fourfacebuttonshoverable">
-            
-        </div>
-        <div id="dpadhoverable">
-            
-        </div>
-        <div id="starthoverable">
-            
-        </div>
-        <div id="homehoverable">
-            
-        </div>
-        <div id="leftbumperhoverable">
-            
-        </div>
-        <div id="rightbumperhoverable">
-            
-        </div>
-        <div id="lefttriggerhoverable">
-            
-        </div>
-        <div id="righttriggerhoverable">
-            
-        </div>
-        <div id="connecthoverable">
-            
-        </div>
-        <div id="backhoverable">
-            
-        </div>
-        </div>
+        <!--<div id="hoverable">-->
+            <div id="leftanalogStickHoverable">
+
+            </div>
+            <div id="rightanalogStickHoverable">
+
+            </div>
+            <div id="fourfacebuttonshoverable">
+
+            </div>
+            <div id="dpadhoverable">
+
+            </div>
+            <div id="starthoverable">
+
+            </div>
+            <div id="homehoverable">
+
+            </div>
+            <div id="leftbumperhoverable">
+
+            </div>
+            <div id="rightbumperhoverable">
+
+            </div>
+            <div id="lefttriggerhoverable">
+
+            </div>
+            <div id="righttriggerhoverable">
+
+            </div>
+            <div id="connecthoverable">
+
+            </div>
+            <div id="backhoverable">
+
+            </div>
+
+        <!--</div>-->
+
         <div id="hovertext" class="Parts">
-            
+
         </div>
-        
-        </center>
-        
-        <ul id="navbar">
-            <li><a href="aboutme.html">About Me</a></li>
-            <li><a href="hardware.html">Hardware</a></li>
-            <li><a href="calc.html">Calculator</a></li>
-            <li><a href="boxgame.html">Box Game (in development stages)</a></li>
-            <li><a href="information.html">Top 10 Lists</a></li>
-            <li><a href="Vindinium.html">Info about Vindinium</a></li>
-            <li><a href="index.html">Index</a></li>
-        </ul>
-        <script src="Modeling.js"></script>
-    </body>
+
+    </center>
+
+    <ul id="navbar">
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="hardware.html">Hardware</a></li>
+        <li><a href="calc.html">Calculator</a></li>
+        <li><a href="boxgame.html">Box Game (in development stages)</a></li>
+        <li><a href="information.html">Top 10 Lists</a></li>
+        <li><a href="Vindinium.html">Info about Vindinium</a></li>
+        <li><a href="index.html">Index</a></li>
+    </ul>
+    <script src="Modeling.js"></script>
+</body>
+
 </html>

@@ -4,10 +4,14 @@ var bullets = [];
 var enemies = [];
 var hardenemies = [];
 var superhardenemies = [];
-// var gameover = [];
+var gameover = false;
 var die = [];
+var restart = document.getElementById("restart");
+// var pausebutton = document.getElementById("pause");
+// var pause = false;
 var score = 0;
-var scoredisplay = document.getElementById("scoredisplay")
+var scoredisplay = document.getElementById("scoredisplay");
+var requestId;
 
 // var line = {
 //     xPos: 0,
@@ -21,6 +25,7 @@ var scoredisplay = document.getElementById("scoredisplay")
 //     }
 // };
 
+// pausebutton.addEventListener("click", pause);
 
 var box = {
     xPos: 200,
@@ -78,6 +83,10 @@ function Bullet(xPos, yPos ) {
     };
     this.move = function() {
         this.yPos -= 10;
+        if(this.yPos < -5){
+            this.toremove = true;
+            }
+        
         if(this.yPos < 0){
             return false;
             
@@ -86,6 +95,7 @@ function Bullet(xPos, yPos ) {
         
         return true;
         }
+        
     };
     this.toremove=false;
 }
@@ -98,10 +108,13 @@ function Enemy(xPos, yPos) {
     this.draw = function() {
         ctx.rect(this.xPos, this.yPos, this.width, this.height);
         ctx.stroke();
-    }
+    };
     this.move = function() {
         this.xPos -= 0;
         this.yPos -= -1;
+        if(this.yPos > 500){
+            this.toremove = true;
+        }
     };
 }
 
@@ -191,7 +204,7 @@ function gameLoop() {
         bullets[j].draw();
         for(var k = 0; k < enemies.length; k++){
             if(isColliding(bullets[j], enemies[k])){
-                enemies.splice(k, 1);
+                enemies[k].toremove=true;
                 bullets[j].toremove=true;
                 score = score + 100;
             } 
@@ -202,7 +215,8 @@ function gameLoop() {
         enemies[i].move();
         enemies[i].draw();
         if(isColliding(box, enemies[i])){
-            box.splice(i, 1);
+            // box.splice(i, 1);
+            gameover = true;
         }
         // for(var j = 0; j < bullets.length; j++){
         //     if(isColliding(enemies[i], bullets[j])){
@@ -219,16 +233,35 @@ function gameLoop() {
     }
     
     garbagecollector();
-    scoredisplay.innerHTML = "score: " + score
-    window.requestAnimationFrame(gameLoop);
+    scoredisplay.innerHTML = "score: " + score;
+    if(gameover === false){
+    requestId = window.requestAnimationFrame(gameLoop);
+    } else{
+        window.cancelAnimationFrame(requestId);
+        gameover;
+    }
 }
 
+
+restart.addEventListener("click", function(){
+    window.cancelAnimationFrame(requestId);
+    score = 0;
+    gameover = false;
+    enemies = [];
+    bullets = [];
+    gameLoop();
+});
 
 function garbagecollector(){
     for (var j = 0; j < bullets.length; j++) {
             if(bullets[j].toremove === true){
-                bullets.splice(j, 1)
+                bullets.splice(j, 1);
             }
+    }
+    for (var k = 0; k < enemies.length; k++){
+        if(enemies[k].toremove === true){
+            enemies.splice(k, 1);
+        }
     }
 }
 

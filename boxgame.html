@@ -23,11 +23,23 @@
         width:45%;
         display:inline-block;
     }
-    l {
+    li {
         vertical-align:top;
         text-align:right;
         width:45%;
         display:inline-block;
+    }
+    #restart {
+        width:75px;
+        height:25px;
+        font-size:15px;
+        font-family:monospace;
+    }
+    #pause {
+        width:75px;
+        height:25px;
+        font-size:15px;
+        font-family:monospace;
     }
 </style>
 <body>
@@ -35,13 +47,19 @@
         <h1>Box Game (in development stages)</h1>
     <canvas id="mycanvas" width="400px" height="500px" style="border: 2px solid black"></canvas>
     <div id="container">
-    <p>Press refresh on your browser to start over.</p>
+    <p>Press the restart button to start over.</p>
+    <p>If you do click the restart button, click the game after you click restart before you press the spacebar so you don't keep restarting the game.</p>
     <p>Left and right arrow keys: Moves left and right.</p>
     <p>Spacebar: Shoot</p>
     <p></p>
     <div id="scoredisplay">
         
     </div>
+    <div id="gameover">
+        
+    </div>
+    <input type="button" value="restart" id="restart">
+    <!--<input type="button" value="pause" id="pause">-->
     </div>
     </center>
     <script src="boxgame.js"></script>

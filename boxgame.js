@@ -220,7 +220,6 @@ function gameLoop() {
         gameover;
     }
 }
-// game = setTimeout(gameLoop, 30/30);
 
 restart.addEventListener("click", function(){
     window.cancelAnimationFrame(requestId);

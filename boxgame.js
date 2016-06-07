@@ -2,30 +2,27 @@ var mycanvas = document.getElementById("mycanvas");
 var ctx = mycanvas.getContext("2d");
 var bullets = [];
 var enemies = [];
-var hardenemies = [];
-var superhardenemies = [];
 var gameover = false;
 var die = [];
 var restart = document.getElementById("restart");
-// var pausebutton = document.getElementById("pause");
-// var pause = false;
+var pauseGame = document.getElementById("pause");
+var gamePaused = false;
 var score = 0;
 var scoredisplay = document.getElementById("scoredisplay");
 var requestId;
+var game;
 
-// var line = {
-//     xPos: 0,
-//     yPos: 400,
-//     height: 50,
-//     width: 400,
-    
-//     draw: function() {
-//         ctx.rect(line.xPos, line.yPos, this.width, this.height);
-//         ctx.stroke();
-//     }
-// };
-
-// pausebutton.addEventListener("click", pause);
+pauseGame.addEventListener("click", function() {
+    if(gamePaused === true){
+        gamePaused = false;
+        requestId = window.requestAnimationFrame(gameLoop);
+        pauseGame.value = "pause";
+    } else {
+        gamePaused = true;
+        window.cancelAnimationFrame(requestId);
+        pauseGame.value = "resume";
+    }
+});
 
 var box = {
     xPos: 200,
@@ -118,38 +115,16 @@ function Enemy(xPos, yPos) {
     };
 }
 
-function Hardenemy(xPos, yPos) {
-    this.xPos = xPos;
-    this.yPos = yPos;
-    this.height = 40;
-    this.width = 40;
-    this.draw = function() {
-        ctx.rect(this.xPos, this.yPos, this.width, this.height);
-        ctx.stroke();
-    };
-    var tempRand = Math.random() * mycanvas.width;
-    this.move = function() {
-        this.xPos -= tempRand;
-        this.yPos -= -10;
-    };
+function pauseGame() {
+    game = clearTimeout(game);
+    pauseGame.addEventListener("click", pauseGame);
+    if(!gamePaused){
+        gamePaused = true;
+    } else if (gamePaused){
+        game = setTimeout(gameLoop, 500/30);
+        gamePaused = false;
+    }
 }
-
-function Superhardenemy(xPos, yPos) {
-    this.xPos = xPos;
-    this.yPos = yPos;
-    this.height = 50;
-    this.width = 50;
-    this.draw = function() {
-        ctx.rect(this.xPos, this.yPos, this.width, this.height);
-        ctx.stroke();
-    };
-    var tempRand = Math.random() * mycanvas.width;
-    this.move = function() {
-        this.xPos -= tempRand;
-        this.yPos -= -100;
-    };
-}
-
     
     
     
@@ -169,8 +144,20 @@ document.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 32) {
         box.shooting = true;
     }
- 
-
+    if (evt.keycode === 80){
+        
+    }
+        
+    if (evt.keyCode === 82) {
+        window.cancelAnimationFrame(requestId);
+        score = 0;
+        gameover = false;
+        enemies = [];
+        bullets = [];
+        box.xPos = 200;
+        box.yPos = 400;
+        gameLoop();
+    }
 });
 
 document.addEventListener("keyup", function(evt) {
@@ -215,17 +202,9 @@ function gameLoop() {
         enemies[i].move();
         enemies[i].draw();
         if(isColliding(box, enemies[i])){
-            // box.splice(i, 1);
             gameover = true;
+            // alert("Game Over. Press R to Restart.");
         }
-        // for(var j = 0; j < bullets.length; j++){
-        //     if(isColliding(enemies[i], bullets[j])){
-        //         bullets.splice(j, 1);
-        //     }
-        // if(isColliding(bullets, enemies[i])){
-        //     enemies.splice(i, 1);
-        //     bullets.splice(bullets, 1);
-        // }
     }
     
     for (var i = 0; i < die.length; i++) {
@@ -234,14 +213,14 @@ function gameLoop() {
     
     garbagecollector();
     scoredisplay.innerHTML = "score: " + score;
-    if(gameover === false){
+    if(gameover === false ){
     requestId = window.requestAnimationFrame(gameLoop);
     } else{
         window.cancelAnimationFrame(requestId);
         gameover;
     }
 }
-
+// game = setTimeout(gameLoop, 30/30);
 
 restart.addEventListener("click", function(){
     window.cancelAnimationFrame(requestId);
@@ -249,6 +228,8 @@ restart.addEventListener("click", function(){
     gameover = false;
     enemies = [];
     bullets = [];
+    box.xPos = 200;
+    box.yPos = 400;
     gameLoop();
 });
 
@@ -269,10 +250,7 @@ function garbagecollector(){
 var wave1 = setInterval(function(){
     var tempRand = Math.random() * mycanvas.width;
     enemies.push(new Enemy(tempRand - 5, 0));
-    hardenemies.push(new Hardenemy(tempRand, 0));
-    superhardenemies.push(new Superhardenemy(tempRand, 0));
-}, 
-1000);
+}, 1000);
 
 
 function isColliding(thing1, thing2){

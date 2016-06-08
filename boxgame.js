@@ -11,14 +11,22 @@ var score = 0;
 var scoredisplay = document.getElementById("scoredisplay");
 var requestId;
 var game;
+var add;
 
 pauseGame.addEventListener("click", function() {
     if(gamePaused === true){
         gamePaused = false;
+        wave1 = setInterval(function(){
+        var tempRand = Math.random() * mycanvas.width;
+    enemies.push(new Enemy(tempRand - 5, 0));
+}, 1000);
         requestId = window.requestAnimationFrame(gameLoop);
         pauseGame.value = "pause";
-    } else {
+        
+    
+    } else if(gamePaused === false) {
         gamePaused = true;
+        clearInterval(wave1);
         window.cancelAnimationFrame(requestId);
         pauseGame.value = "resume";
     }
@@ -114,19 +122,6 @@ function Enemy(xPos, yPos) {
         }
     };
 }
-
-function pauseGame() {
-    game = clearTimeout(game);
-    pauseGame.addEventListener("click", pauseGame);
-    if(!gamePaused){
-        gamePaused = true;
-    } else if (gamePaused){
-        game = setTimeout(gameLoop, 500/30);
-        gamePaused = false;
-    }
-}
-    
-    
     
 document.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 37) {
@@ -147,10 +142,15 @@ document.addEventListener("keydown", function(evt) {
     if (evt.keyCode === 80){
         if(gamePaused === true){
             gamePaused = false;
+            wave1 = setInterval(function(){
+            var tempRand = Math.random() * mycanvas.width;
+            enemies.push(new Enemy(tempRand - 5, 0));
+            }, 1000);
             requestId = window.requestAnimationFrame(gameLoop);
             pauseGame.value = "pause";
         } else {
             gamePaused = true;
+            clearInterval(wave1);
             window.cancelAnimationFrame(requestId);
             pauseGame.value = "resume";
         }
@@ -164,6 +164,9 @@ document.addEventListener("keydown", function(evt) {
         bullets = [];
         box.xPos = 200;
         box.yPos = 400;
+        box.shooting = false;
+        box.goLeft = false;
+        box.goRight = false;
         gameLoop();
     }
 });
@@ -237,6 +240,9 @@ restart.addEventListener("click", function(){
     bullets = [];
     box.xPos = 200;
     box.yPos = 400;
+    box.shooting = false;
+    box.goLeft = false;
+    box.goRight = false;
     gameLoop();
 });
 
